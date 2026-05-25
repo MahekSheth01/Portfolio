@@ -20,16 +20,17 @@ if (
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (mobile apps, curl, Postman)
+      // Allow requests with no origin (Postman, curl, mobile apps)
       if (!origin) return callback(null, true);
 
-      // Allow any localhost / 127.0.0.1 origin (any Vite port)
+      // Allow any localhost / 127.0.0.1 (local dev, any Vite port)
       const isLocal =
         /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+      if (isLocal) return callback(null, true);
 
-      if (isLocal) {
-        return callback(null, true);
-      }
+      // Allow production frontend URL set in .env (e.g. https://your-app.vercel.app)
+      const productionURL = process.env.CLIENT_URL;
+      if (productionURL && origin === productionURL) return callback(null, true);
 
       callback(new Error(`CORS blocked for origin: ${origin}`));
     },
