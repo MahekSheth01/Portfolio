@@ -1,16 +1,17 @@
 import { useState } from "react";
 import {
-  FaHome, FaProjectDiagram, FaImages, FaCode, FaEnvelope, FaSignOutAlt, FaBars, FaTimes,
+  FaHome, FaProjectDiagram, FaImages, FaCode, FaEnvelope, FaSignOutAlt, FaBars, FaTimes, FaFileAlt,
 } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 const menuItems = [
-  { title: "Dashboard", path: "/admin", icon: <FaHome /> },
-  { title: "Projects", path: "/admin/projects", icon: <FaProjectDiagram /> },
-  { title: "Gallery", path: "/admin/gallery", icon: <FaImages /> },
-  { title: "Skills", path: "/admin/skills", icon: <FaCode /> },
-  { title: "Messages", path: "/admin/messages", icon: <FaEnvelope /> },
+  { title: "Dashboard", path: "/admin",          icon: <FaHome /> },
+  { title: "Projects",  path: "/admin/projects",  icon: <FaProjectDiagram /> },
+  { title: "Gallery",   path: "/admin/gallery",   icon: <FaImages /> },
+  { title: "Skills",    path: "/admin/skills",    icon: <FaCode /> },
+  { title: "Messages",  path: "/admin/messages",  icon: <FaEnvelope /> },
+  { title: "Resume",    path: "/admin/resume",    icon: <FaFileAlt /> },
 ];
 
 const DashboardLayout = ({ children }) => {

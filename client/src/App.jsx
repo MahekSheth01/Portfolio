@@ -23,6 +23,8 @@ import AdminSkills from
 
 import AdminMessages from
   "./pages/AdminMessages";
+import AdminResume from
+  "./pages/AdminResume";
 function App() {
 
   return (
@@ -90,6 +92,15 @@ function App() {
 
               <AdminMessages />
 
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin/resume"
+          element={
+            <ProtectedRoute>
+              <AdminResume />
             </ProtectedRoute>
           }
         />
