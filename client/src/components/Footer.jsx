@@ -36,14 +36,14 @@ const Footer = () => {
 
           {/* SOCIALS */}
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://github.com/MahekSheth01" target="_blank" rel="noopener noreferrer"
               style={{ color: "var(--text-primary)", fontSize: "1.5rem", transition: "opacity 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.opacity = 0.7}
               onMouseLeave={e => e.currentTarget.style.opacity = 1}
             >
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/mahek-sheth-23726023b/" target="_blank" rel="noopener noreferrer"
               style={{ color: "var(--text-primary)", fontSize: "1.5rem", transition: "opacity 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.opacity = 0.7}
               onMouseLeave={e => e.currentTarget.style.opacity = 1}
