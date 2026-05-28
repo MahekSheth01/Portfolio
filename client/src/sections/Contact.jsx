@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   const links = [
-    { icon: <FaEnvelope />, label: "mahek@gmail.com", href: "mailto:mahek@gmail.com" },
+    { icon: <FaEnvelope />, label: "maheksheth77@gmail.com", href: "mailto:maheksheth77@gmail.com" },
     { icon: <FaGithub />, label: "github.com/maheksheth", href: "https://github.com" },
     { icon: <FaLinkedin />, label: "linkedin.com/in/maheksheth", href: "https://linkedin.com" },
   ];
